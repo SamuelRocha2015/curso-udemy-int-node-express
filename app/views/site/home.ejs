@@ -1,4 +1,10 @@
 <!DOCTYPE html>
 <html>
-	<h1>Pagina Home</h1>
+	<h1>Clientes</h1>
+
+	<ul>
+		<% for (var chave in clientes) { %>
+			<li><%= clientes[chave].nome %> - <%= clientes[chave].email %></li>
+		<% } %>
+	</ul>
 </html>

@@ -8,10 +8,20 @@
 		<% } %>
 	</ul>
 
+
+	<% if(erros) { %>
+	<ul>
+		<% for (var k in erros) { %>
+			<li><%= erros[k].msg %></li>
+		<% } %>
+	</ul>
+	<% } %>
+
+
 	<br>
 	<form action="/" method="POST">
-		<input type="text" name="nome" placeholder="Nome">
-		<input type="text" name="email" placeholder="Email">
-		<input type="submit" name="Salvar">
+		<input type="text" name="nome" placeholder="Nome" value="<%= dados.nome%>">
+		<input type="text" name="email" placeholder="Email" value="<%= dados.email%>">
+		<button>Adicionar</button>
 	</form>
 </html>
